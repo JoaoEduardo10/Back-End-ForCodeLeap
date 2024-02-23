@@ -51,7 +51,7 @@ class CareersController(APIView):
 
         if serializer.is_valid():
             serializer.save()
-            return Response(serializer.data)
+            return Response(serializer.data, status=204)
     
         return Response(serializer.errors, status=404)
     
