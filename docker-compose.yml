@@ -1,0 +1,10 @@
+version: "3.8"
+
+services:
+  django:
+    container_name: "back-end"
+    build:
+      context: ./CodeLeap
+      dockerfile: dockerfile
+    ports:
+      - "8000:8000"
